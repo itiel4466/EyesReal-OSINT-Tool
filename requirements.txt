@@ -1,0 +1,7 @@
+requests
+Pillow\ollama
+cryptography
+rich
+phonenumbers
+python-dotenv
+itsdangerous
