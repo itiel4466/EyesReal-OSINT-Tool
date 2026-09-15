@@ -1,46 +1,58 @@
-# 🔍 EYESREAL v15 — Plivo Integration
+# 👁️ EyesReal OSINT Framework v15.0
 
-Advanced Open Source Intelligence (OSINT) platform. The full v15 source is available in `EyesReal_v15_Plivo.py`, featuring updated modules 5 and 6 integrated with Plivo (replacing the old Twilio dependency). The original banner, colors, report generator, and unrelated modules are fully preserved.
+![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
+![Kali Linux Support](https://img.shields.io/badge/Supported-Kali_Linux-black.svg?logo=kali-linux)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Active_Development-brightgreen.svg)
 
-## 🚀 Features & Updates
-- **Modules 5 & 6:** Module 5 sends a single SMS, and module 6 initiates a direct text-to-speech test call using fixed account-owned senders and authorized destinations.
-- **Workflow Updates:** The old bridge and E-key hangup workflow have been replaced by direct test calls. Menu labels reflect this, and empty configuration blocks sends.
-- **Web Companion (`app.py`):** Runs alongside the main tool. Voice instructions and web interfaces require `PUBLIC_BASE_URL` pointing to a public HTTPS URL. Both share `.env` and `activity.sqlite3`.
-- **Audit & Reports:** The Plivo activity database is separate from the original EYESREAL encrypted audit database. Module 14 retains its original behavior without removing the Plivo database, and EYESREAL reports receive Plivo acceptance/errors.
+**Advanced Cyber Intelligence & Reconnaissance Platform**
 
-## ⚙️ Installation & Setup (Kali Linux)
+EyesReal is an enterprise-grade, highly modular Open-Source Intelligence (OSINT) framework designed for advanced data gathering, entity cross-correlation, and secure reconnaissance. 
 
-Clone the repository and enter the directory:
+> **Academic Note:** This platform was engineered as an advanced final project for a 5-Unit Computer Science curriculum, demonstrating principles of asynchronous networking, graph-based databases, cryptography, and object-oriented architecture.
+
+---
+
+## 🚀 Core Features
+
+*   **🛡️ Stealth Engine & Resilience:** Integrated proxy rotation, dynamic User-Agent spoofing, and rate-limiting to bypass modern WAFs and bot-protection mechanisms.
+*   **🧩 14 Specialized Modules:** A massive arsenal of tools including network analysis, social media footprinting, and deep-web scraping.
+*   **📡 Plivo Integration (Modules 5 & 6):** Automated, verified SMS dispatching and direct TTS (Text-to-Speech) call generation for target verification.
+*   **🧠 Local AI Integration:** Built-in support for `ollama` to analyze unstructured data locally without leaking intelligence to third-party clouds.
+*   **🔒 Cryptographic Security:** Utilizes `Fernet` symmetric encryption to secure sensitive API keys, session tokens, and gathered intelligence.
+*   **🕸️ Cross-Correlation Engine:** Employs SQLite to build entity graphs (nodes and edges), automatically linking emails, phone numbers, and IPs.
+*   **📊 Rich CLI UI:** Powered by the `rich` library for a beautiful, responsive, and color-coded terminal interface, including progress bars and data tables.
+
+## ⚙️ Prerequisites
+
+Ensure your environment is set up with the following dependencies. Kali Linux is the recommended operating system.
+
+*   Python 3.8 or higher
+*   Git
+*   Valid API keys for selected modules (e.g., Plivo) added to a `.env` file.
+
+## 📥 Installation
+
+Clone the repository and install the required dependencies:
+
 ```bash
-git clone [https://github.com/itiel4466/EyesReal-OSINT-Tool.git]
+# Clone the repository
+git clone [https://github.com/itiel4466/EyesReal-OSINT-Tool.git](https://github.com/itiel4466/EyesReal-OSINT-Tool.git)
+
+# Navigate to the directory
 cd EyesReal-OSINT-Tool
 
-
-Create and activate a Python virtual environment, then install dependencies:
-python3 -m venv .venv
-source .venv/bin/activate
+# Install Python dependencies
 pip install -r requirements.txt
+💻 Usage
+Launch the main framework utilizing the rich CLI interface:
 
+Bash
+python3 eyesreal.py
+Upon launch, you will be greeted by the master banner and the 14-module selection menu. Navigate using the on-screen prompts.
 
+⚠️ Disclaimer
+Educational and Authorized Use Only.
+EyesReal was developed strictly for academic purposes, authorized penetration testing, and ethical OSINT research. The developers assume no liability and are not responsible for any misuse or damage caused by this program. Users must comply with all applicable local, state, and federal laws. Do not target systems or entities without explicit mutual consent.
 
-Configure your environment variables:
-cp .env.example .env
-
-
-(Edit the .env file with your Plivo credentials, API keys, and settings).
-
-💻 Usage & Running
-Run the main CLI script:
-python3 EyesReal_v15_Plivo.py
-
-Or run the companion web application:
-python3 app.py
-
-(Note: cli.py is available as an alternative minimal terminal interface).
-
-⚠️ Disclaimer & Important Notes
-Created for educational and authorized security testing purposes only.
-
-No real messages or calls were sent during validation. Provider acceptance does not confirm delivery; check the Plivo console for final results..
-
-See configuration details for country coverage constraints.
+Developed with uncompromising standards for modern cyber research.
